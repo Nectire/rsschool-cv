@@ -121,7 +121,7 @@ Now I want to find an occupation to which I want to devote my future careerу, a
   })();
 ```
 ## Experience:
-_No IT Experience_ ?\_(?)_/?
+_No IT Experience_ ¯\_(ツ)_/¯
 
 ## Education: 
 + **Southern Federal University** 
