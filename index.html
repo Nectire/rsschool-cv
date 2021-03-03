@@ -4,137 +4,80 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet">
    <title>CV HTML</title>
 </head>
 <body>
    <main class="main">
-      <header class="header">
-         <h1 class="header-title-name">Maxim Yazykov</h1>
-         <div class="header-contact">Contact: <a href="" class="header-link">yazykovmaxim@gmail.com</a></div>
-         <img src="img/corey_harrt.jpg" alt="Corey Hart" width="200px">
-      </header>
-      <section class="block-inform">
-         <h2 class="block-title">About:</h2>
-         <p class="block-text code-text">I'm a self-taught student. Graduated bachelor in Southern Federal University in Automatic Control System faculty. Have
-         expierence in the installation of low-current systems (fire-alarm systems, CCTV, access control system etc.) for a year.
-         Now I want to find an occupation to which I want to devote my future careerу, and now I settled on the frontend.</p>
-      </section>
-      <section class="block-inform">
-         <h2 class="block-title">Skills:</h2>
-         <ul class="block-list">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>SCSS</li>
-            <li>JS (Basic level)</li>
-            <li>BEM Methodology</li>
-            <li>Prepros</li>
-            <li>Gulp</li>
-         </ul>
-      </section>
-      <section class="block-inform">
-         <h1 class="block-title">My Simple project:</h1>
-         <p class="block-text code-text">
-            (() => {
-            const config = {
-            dotMinRad: 6,
-            dotMaxRad: 20,
-            bigDotRad: 12,
-            massFactor: 0.002,
-            defColor: "rgba(250,10,30,0.9)",
-            smooth : 0.64,
-            sphereRad : 300,
-            mouseSize: 120,
-            }
-            
-            const TWO_PI = 2 * Math.PI;
-            const canvas = document.querySelector(`canvas`);
-            const ctx = canvas.getContext(`2d`);
-            
-            let w, h, mouse, dots;
-            
-            class Dot{
-            constructor(r){
-            this.pos = { x: mouse.x,
-            y: mouse.y};
-            this.vel = {x: 0 , y: 0};
-            this.rad = r || random(config.dotMinRad, config.dotMaxRad);
-            this.mass = this.rad * config.massFactor;
-            this.color = config.defColor;
-            }
-            
-            draw(x, y) {
-            this.pos.x =x || this.pos.x + this.vel.x;
-            this.pos.y =y || this.pos.y + this.vel.y;
-            createCircle(this.pos.x, this.pos.y, this.rad, true, this.color);
-            createCircle(this.pos.x, this.pos.y, this.rad, false, config.defColor);
-               }
-            }
-            function updateDots() {
-            for (let i = 1; i < dots.length; i++){ let acc={x: 0, y: 0} for(let j=0; j < dots.length; j++){ if (i==j) continue; let
-               [a, b]=[dots[i], dots[j]]; let delta={x: b.pos.x - a.pos.x, y: b.pos.y - a.pos.y} let dist=Math.sqrt(delta.x *
-               delta.x + delta.y * delta.y) || 1; let force=(dist - config.sphereRad)/ dist * b.mass; if (j==0){ let
-               alpha=config.mouseSize / dist; a.color=`rgba(250,10,30, ${alpha})`; dist < config.mouseSize ? force=(dist -
-               config.mouseSize) * b.mass : force=a.mass; } acc.x=acc.x + delta.x * force; acc.y=acc.y + delta.y * force; }
-               dots[i].vel.x=dots[i].vel.x * config.smooth + acc.x * dots[i].mass; dots[i].vel.y=dots[i].vel.y * config.smooth +
-               acc.y * dots[i].mass; } dots.map(e=> e== dots[0] ? e.draw(mouse.x, mouse.y) : e.draw());
-               }
-               function createCircle(x, y, rad, fill, color) {
-               ctx.fillStyle = ctx.strokeStyle = color;
-               ctx.beginPath();
-               ctx.arc(x, y, rad, 0, TWO_PI);
-               ctx.closePath();
-               fill ? ctx.fill() : ctx.stroke();
-               }
-               function random(min, max) {
-               return Math.random() * (max - min) + min;
-               }
-               function init(){
-               w = canvas.width = innerWidth;
-               h = canvas.height = innerHeight;
-               mouse = {x: w / 2, y: h / 2, down: false}
-               dots = [];
-               dots.push( new Dot(config.bigDotRad));
-               }
-               function loop() {
-               ctx.clearRect(0, 0, w, h);
-               if(mouse.down){
-               dots.push(new Dot()); };
-               updateDots();
-               window.requestAnimationFrame(loop);
-               }
-               init();
-               loop();
-               function setPos({layerX, layerY }) {
-               [mouse.x, mouse.y] = [layerX, layerY];
-               }
-            
-               function isDown() {
-               mouse.down = !mouse.down;
-               console.log('working');
-               }
-               canvas.addEventListener(`mousemove`, setPos);
-               window.addEventListener(`mousedown`, isDown);
-               window.addEventListener(`mouseup` , isDown);
-               })();
-         </p>
-      </section>
-      <section class="block-inform">
-         <h2 class="block-title">Experience:</h2>
-         <p class="block-text">No IT Experience ¯\_(ツ)_/¯</p>
-      </section>
-      <section class="block-inform">
-         <h1 class="block-title">Education:</h1>
-         <ul class="block-list">
-            <li>Southern Federal University</li>
-            <li>faculty: Automatic Control System</li>
-            <li>Bachelor</li>
-         </ul>
-      </section>
-      <section class="block-inform">
-         <h2 class="block-title">English level:</h2>
-         <p class="block-text">B1</p>
-      </section>
+      <div class="container">
+         <header class="header">
+               <h1 class="header-title-name">Maxim Yazykov</h1>
+               <span class="header-contact">Contact:</span>
+               <a href="" class="header-link">yazykovmaxim@gmail.com</a>
+               <a href="https://github.com/Nectire" class="header-link avatar" aria-label="github link"><img src="img/corey_harrt.jpg" alt="Corey Hart" width="100px"></a>
+         </header>
+         <section class="block-inform">
+            <h2 class="block-title">About:</h2>
+            <p class="block-text">I'm a self-taught student. Graduated bachelor in Southern Federal University in Automatic Control System faculty. Have
+            expierence in the installation of low-current systems (fire-alarm systems, CCTV, access control system etc.) for a year.
+            Now I want to find an occupation to which I want to devote my future careerу, and now I settled on the <b>frontend</b>.</p>
+         </section>
+         <section class="block-inform">
+            <h2 class="block-title">Skills:</h2>
+            <ul class="block-list">
+               <li>HTML</li>
+               <li>CSS</li>
+               <li>SCSS</li>
+               <li>JS (Basic level)</li>
+               <li>BEM Methodology</li>
+               <li>Prepros</li>
+               <li>Gulp</li>
+            </ul>
+         </section>
+         <section class="block-inform">
+            <h1 class="block-title">My Simple projects:</h1>
+            <div class="block-item">
+               <a href="https://nectire.github.io/Landify/" class="block-item-link" aria-label="Landify">Landify</a>
+               <a href="https://nectire.github.io/Bicycle_template/" class="block-item-link" aria-label="Bicycle_template">Bicycle</a>
+               <a href="https://nectire.github.io/Theatre_web_template/" class="block-item-link"
+                  aria-label="Theatre_web_template">Theatre</a>
+            </div>
+         </section>
+         <section class="block-inform">
+            <h2 class="block-title">Experience:</h2>
+            <p class="block-text">No IT Experience <br>  ¯\_(ツ)_/¯</p>
+         </section>
+         <section class="block-inform">
+            <h1 class="block-title">Education:</h1>
+            <ul class="block-list">
+               <li>Southern Federal University</li>
+               <li>faculty: Automatic Control System</li>
+               <li>Bachelor</li>
+            </ul>
+         </section>
+         <section class="block-inform">
+            <h2 class="block-title">English level:</h2>
+            <p class="block-text eng-level">B1 Intermediate</p>
+         </section>
+      </div>
+      <footer class="footer">
+         <div class="container">
+            <div class="footer-row">
+
+               <div class="footer-block">
+                  <a href="https://github.com/Nectire" class="footer-link-git">Github link</a>
+               </div>
+               <span class="footer-copyright">2021</span>
+               <div class="footer-block">
+                  <a href="https://rs.school/js/" class="footer-link"><img src="https://rs.school/images/rs_school_js.svg" alt="rs school" width="80px" height="30px"></a>
+                  <a href="https://rs.school/js/" class="footer-link"><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" alt="youtube" width="50px" height="37px"></a>
+               </div>
+            </div>
+         </div>
+      </footer>
    </main>
 </body>
 </html>
