@@ -1,0 +1,113 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.main {
+   background-color: #f9fbfd;
+   font-family: 'Poppins', sans-serif;
+}
+.container{
+   height: 100%;
+   max-width: 1100px;
+   margin: 0 auto;
+}
+.header {
+   margin: 0px 0px 30px 0px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.header-title-name {
+   margin: 30px 0px 0px 0px;
+   
+}
+.header-contact {
+   margin: 5px 0px 0px 0px;
+}
+.header-link {
+   margin: 5px 0px 0px 0px;
+   text-decoration: none;
+   color: #345858;
+   text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.avatar{
+   margin: 15px 0px 0px 0px;
+}
+.block-inform {
+   text-align: center;
+   margin: 30px auto 0px auto;
+   border-radius: 30px;
+   box-shadow: 0px 15px 15px -12px rgba(0, 0, 0, 0.3);
+}
+.block-title {
+    letter-spacing: 3px;
+    margin: 15px auto;
+}
+.block-text {
+   margin: 0px auto;
+   padding: 0px 40px 25px 40px;
+   color: #646668;
+}
+.block-list {
+   padding: 0px 0px 25px 0px;
+   list-style: none;
+   font-size: 16px;
+   color: #646668;
+   letter-spacing: 3px;
+}
+.block-item {
+   padding: 0px 0px 25px 0px;
+   display: flex;
+   flex-direction: column;
+
+}
+.block-item-link {
+   text-decoration: none;
+   letter-spacing: 3px;
+   color: #345858;
+   text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+}
+.eng-level{
+   letter-spacing: 3px;
+}
+
+.footer-row {
+   max-width: 1100px;
+   margin: 35px 0px 0px 0px;
+   padding: 20px 0px;
+   border-radius: 15px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 20px;
+   background: linear-gradient(#f9fbfd, #ececec);
+   box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.3);
+}
+.footer-block {
+   max-width: 130px;
+   padding: 0px 100px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+}
+.footer-link-git {
+   text-decoration: none;
+   white-space: nowrap;
+   text-decoration: none;
+   color: #345858;
+   text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.footer-copyright {
+   color: #000;
+}
+.footer-link {
+   padding: 0px 15px 0px 0px;
+}
+.footer-link:last-child {
+   padding: 0px;
+}
