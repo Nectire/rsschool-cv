@@ -1,3 +1,3 @@
 # rsschool-cv
-Markdown &amp; Git
+HTML, CSS & Git Basics
 [CV LINK](https://nectire.github.io/rsschool-cv/)
