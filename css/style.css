@@ -28,6 +28,19 @@
 .header-contact {
    margin: 5px 0px 0px 0px;
 }
+
+.header-list{
+   position: relative;
+   left: -20px;
+   width: 48%;
+   list-style: none;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   text-align: center;
+}
+
+
 .header-link {
    margin: 5px 0px 0px 0px;
    text-decoration: none;
@@ -36,6 +49,7 @@
 }
 .avatar{
    margin: 15px 0px 0px 0px;
+
 }
 .block-inform {
    text-align: center;
